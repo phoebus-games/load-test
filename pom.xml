@@ -45,6 +45,10 @@
                 <version>2.2.2</version>
                 <configuration>
                     <disableCompiler>true</disableCompiler>
+                    <runMultipleSimulations>true</runMultipleSimulations>
+                    <!--
+                    <simulationClass>roulette.RouletteSimulation</simulationClass>
+                    -->
                 </configuration>
                 <executions>
                     <execution>
