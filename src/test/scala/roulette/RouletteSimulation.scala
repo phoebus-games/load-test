@@ -14,7 +14,7 @@ class RouletteSimulation extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
   val scn = scenario("Classic Slot")
-    .exec(http("Homepage").get("").check(status.is(200)))
+    .exec(http("Get Wallet").get("/api/wallet").check(status.is(200)))
     .exec(http("Get Game").get("/api/games/roulette").check(status.is(200)))
     .pause(7)
     .exec(http("Add Bet").post("/api/games/roulette/bets/red").body(StringBody("{\"amount\": 1}")).check(status.is(201)))
